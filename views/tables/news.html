@@ -1,0 +1,123 @@
+<!-- BEGIN: NEWS -->
+<div class="box-dog-faq pro">
+    <div class="bg-img" >
+        <img src="img/banner4.png" alt="" class="w-100">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="dog-type-title">
+                    <div class="line-up">
+                        <img src="img/noodles3.png" alt="">
+                    </div>
+                    <div class="text">
+                        <h1>News</h1>
+                    </div>
+                    <div class="line-down">
+                        <img src="img/noodles3.png" alt="">
+                    </div>
+                </div>
+                <div class="link-type-dog">
+                    <a href="?m=tables&a=Home" class="mr-3">
+                        <img src="img/icon_home.png" alt="">
+                    </a>
+                    <i class="fa fa-angle-right mr-3" aria-hidden="true" ></i>
+                    <a href="?m=tables&a=news" class="mr-3">news</a>
+                    <i class="fa fa-angle-right mr-3" aria-hidden="true" ></i>
+                    <a href="#" class="mr-3">{news}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="box-dog-type-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="dog-type-search">
+                    <form  method="GET" class="frm-search pro">
+                        <input type="hidden" name="m" value="tables" />
+                        <input type="hidden" name="a" value="news" />
+                        <input type="text" name="Search" id="" class="inp-search" placeholder="Search">               
+                        <button name="search" class="btn-search" type= "submit"><i class="fa fa-search" aria-hidden="true" ></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <ul class="nav nav-tabs d-flex mw-485 dog-type-tab" >
+                
+                <li class="tab-type-item {highlight}" >
+                    <a href="?m=tables&a=news&tin=1" >Highlight</a>
+                </li>
+                
+                <li class="tab-type-item {update}">
+                    <a href="?m=tables&a=news&tin=0" >New update</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="dog-type-list">
+
+        <div class="container ">
+            <div class="row justify-content-start">
+                <!-- BEGIN: news -->
+                <div class="col-md-4 mb-5">
+                    <div class="dog-type-content">
+                        <a href="?m=news&a=detail&detail={LIST.id}">
+                            <img src="{baseUrl}admin/img/{LIST.img}" alt="" width="360px" height="238px">
+                        </a>
+                        <div class="new-menu">
+                            <div class="new-time">
+                                <span>{LIST.date_up}</span>
+                            </div>
+                            <div class="new-title">
+                                <a href="?m=news&a=detail&detail={LIST.id}">
+                                    <h3>{LIST.title}</h3>
+                                </a>
+                            </div>
+                            <div class="new-content">
+                                <p>{LIST.subcontent}</p>
+                            </div>
+                            <div class="more-detail">
+                                <a href="?m=news&a=detail&detail={LIST.id}">
+                                    <img src="img/icon_readmore.png" alt="">
+                                    Read more
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END: news -->
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div >
+            <hr>
+        </div>
+    </div>
+    <div class="line-page">
+        <div class="container">
+            <div class="row">
+                <ul class="list-number"> 
+                    <li class="{prev}">
+                        <a href="?m=tables&a=news{tin}&page={pre}"><img src="img/icon_prevert.png" alt=""></a>
+                    </li>
+                    <!-- BEGIN: PAGE -->
+                    <li class="list-page-item {active} ">
+                        <a href="?m=tables&a=news{tin}&page={i}">{i}</a>
+                    </li>
+                    <!-- END: PAGE -->
+                    <li class="{next}">
+                        <a href="?m=tables&a=news{tin}&page={next1}"><img src="img/Icon_next.png " alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END: NEWS -->

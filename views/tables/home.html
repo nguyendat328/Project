@@ -1,0 +1,266 @@
+<!--BEGIN: HOME -->
+<div class="box-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 pl-0">
+                <div class="tab-content">
+                    <!-- BEGIN: DOG_VIEW -->
+                    <div class="tab-pane {active}" id="_id{DOG.id}">
+                        <a href="?m=Dogs&a=detail&detail={DOG.id}"><img src="{baseUrl}/admin/img/{DOG_VIEW.img}" alt="" style="width:765px!important;height:545px!important;object-fit: cover;"></a>
+                    </div>
+                    <!-- END: DOG_VIEW -->
+                </div>
+            </div>
+            <div class="col-md-4 pr-0 ">
+                <ul class="nav nav-tabs d-flex justify-content-between">
+                    <!-- BEGIN: DOG -->
+                    <li class="tab-item pb-15 {current}">
+                        <a class="tab-link " data-toggle="tab" href="#_id{DOG.id}">
+                            <img src="{baseUrl}/admin/img/{DOG.img}" alt="" style="width:170px!important;height:170px!important;object-fit: cover;">
+                        </a>
+                    </li>
+                    <!-- END: DOG -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>  
+<div class="banner1">
+    <img src="img/baner1.png" alt="" class="w-100">
+</div>
+<div class="box-2">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div class="left-img">
+                <img src="img/noodles_left.png" alt="">
+            </div>
+            <div class="title">
+                <h1>TYPE DOGS</h1>
+            </div>
+            <div class="right-img">
+                <img src="img/noodles_right.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row multiple-items">
+            <!-- BEGIN: SLIDE -->
+            <div class="">
+                <a href="?m=Dogs&a=detail&detail={SLIDE.id}">
+                    <div class="dog-type-content">
+                        <img src="{baseUrl}/admin/img/{SLIDE.img}" alt="" width="263" height="263">
+                        <div class="food-name">
+                            <p>{SLIDE.dog_name}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- END: SLIDE -->
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="see-more">
+                <a href="?m=tables&a=Dogs">See more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="box-3">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div class="left-img">
+                <img src="img/noodles_left.png" alt="">
+            </div>
+            <div class="title">
+                <h1>foods</h1>
+            </div>
+            <div class="right-img">
+                <img src="img/noodles_right.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row multiple-items">
+            <!-- BEGIN: FOOD -->
+            <div class="">
+                <a href="#">
+                    <div class="dog-type-content">
+                        <img src="{baseUrl}/admin/img/{FOOD.img}" alt="" width="263" height="263">
+                        <div class="food-name">
+                            <p>{FOOD.title}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- END: FOOD -->
+        </div>
+    </div>
+    
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="see-more">
+            <a href="?m=tables&a=Foods">See more</a>
+        </div>
+    </div>
+</div>
+
+<div class="box-4">
+    <div class="container">
+        
+        <div class="row align-items-center justify-content-between">
+            <div class="left-img">
+                <img src="img/noodles_left.png" alt="">
+            </div>
+            <div class="title">
+                <h1>Highlight news</h1>
+            </div>
+            <div class="right-img">
+                <img src="img/noodles_right.png" alt="">
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <ul class="nav nav-tabs d-flex mw-485 dog-type-tab" >
+                
+            </ul>
+        </div>
+    </div>
+    <div class="tab-content">
+        <div class="container tab-pane active" id="_new1">
+            <div class="row justify-content-between">
+                <!-- BEGIN: NEWS -->
+                <div class="col-md-4 ">
+                    <div class="dog-type-content">
+                        <a href="?m=news&a=newsdetail&id={LIST.id}">
+                            <img src="{baseUrl}/admin/img/{LIST.img}" alt="" width="360px" height="283px">
+                        </a>
+                        <div class="new-menu">
+                            
+                            <div class="new-title">
+                                <a href="?m=news&a=newsdetail&id={LIST.id}">
+                                    <h3>{LIST.title}</h3>
+                                </a>
+                            </div>
+                            <div class="new-content justify">
+                                <p>{LIST.subcontent}</p>
+                            </div>
+                            <div class="more-detail">
+                                <a href="?m=news&a=newsdetail&id={LIST.id}">
+                                    <img src="img/icon_readmore.png" alt="">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END: NEWS -->
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="see-more">
+                    <a href="?m=tables&a=news">See more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="box-5">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div class="left-img">
+                <img src="img/noodles_left.png" alt="">
+            </div>
+            <div class="title">
+                <h1>contact us</h1>
+            </div>
+            <div class="right-img">
+                <img src="img/noodles_right.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="contact-text">
+                <h4>Send us a message for the best support</h4>
+            </div>
+        </div>
+        <form name="frmContact" action="" method="POST">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="title-contact pro">
+                        <div class="ic_inp">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </div>
+                        <input type="text" name="CustomerName" id="_CustomerName" placeholder="Name" class="inp-fix" onkeyup="checkname()">
+                        <div class="noti" id="noti_name"></div>
+                    </div>
+                    <div class="title-contact mt-4 pro">
+                        <div class="ic_inp">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </div>
+                        <input type="text" name="CustomerEmail" id="_CustomerEmail" placeholder="Email" class="inp-fix" onkeyup="checkemail()">
+                        <div class="noti" id="noti_email"></div>
+                    </div>
+                    <div class="title-contact mt-4 pro">
+                        <div class="ic_inp">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                        </div>
+                        <input type="text" name="CustomerPhone" id="_CustomerPhone" placeholder="Phone" class="inp-fix" onkeyup="checkphone()">
+                        <div class="noti" id="noti_phone"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="note-contact">
+                        <textarea name="CustomerContent" id="_CustomerContent"  placeholder="Content" class="note-fix" onkeyup="checkcontent()"></textarea>
+                    </div>
+                    <div class="noti" id="noti_content"></div>
+                </div>
+                <div class="col-md-12 fix-btn">
+                    <input type="hidden" id="sendmess">
+                    <button type="button" class="btn-submit" onclick="check();">Send Message</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+<script>
+function check(){
+    checkcontent();
+    checkname();
+    checkemail();
+   checkphone();
+    if(kf==1){
+        var url;
+        var data;
+        var f = document.forms["frmContact"];
+        var Name = f.CustomerName.value;
+        var Content = f.CustomerContent.value;
+        var Email = f.CustomerEmail.value;
+        var Phone = f.CustomerPhone.value; 
+         data={
+        'CustomerName': Name,
+        'CustomerEmail': Email,
+        'CustomerPhone': Phone,
+        'CustomerContent': Content
+         };
+         url="{baseUrl}/ajax/sendmess.php";
+
+         $("#sendmess").load(url, data);
+        Name = f.CustomerName.value="";
+        Content = f.CustomerContent.value="";
+        Email = f.CustomerEmail.value="";
+        Phone = f.CustomerPhone.value="";
+        alert("Your request has been sent, please wait for a response from us!")
+
+       
+        
+    }else{alert("Please Fill to All Feilds");}
+};
+</script>
+<!-- END: HOME -->

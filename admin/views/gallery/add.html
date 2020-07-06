@@ -1,0 +1,145 @@
+<!-- BEGIN: ADD -->
+<script>
+    function onresert(){
+        var f           = document.add;
+        var name        = f.txtAlbum.value ="";
+        
+        var sub         = f.txtcaption.value="" ; 
+ 
+    }
+    $(document).ready(function(){
+    $("#showAlbum").hide(); 
+    }); 
+</script>
+        <div class="row bg-title">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                <h4 class="page-title">gallery</h4>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="white-box">
+                    <form method="POST" name="addimg" action="#" accept-charset="UTF-8" role="form" class="form-horizontal group-border-dashed" style="border-radius: 0px;" id="form_equipment" enctype="multipart/form-data">
+                        
+                    
+                            <div class="header">
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item">
+                                      <a id="addImg" class="nav-link " href="#">Add Image</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a id="addAlbum" class="nav-link " href="#">Add Album</a>
+                                    </li>
+                                    
+                                  </ul>
+                                
+                            </div>
+                            <div id="showImg">
+
+                                <div class="form-group" style="margin-top:5px;margin-bottom:15px;">
+                                        <label class="col-sm-3 control-label"><strong>{mess_img1}</strong></label>
+                                        <div class="col-sm-9" style="margin-top:7px;color:red;">
+                                            <span>{mess_img2}</span>  
+                                        </div>
+                                </div>
+                                <div class="form-group" style="margin-top:5px;margin-bottom:15px;">
+                                        <label class="col-sm-3 control-label">Caption</label>
+                                        <div class="col-sm-9">
+                                            <textarea name="txtcaption"  class="form-control" style="height:60px;" required></textarea>
+                                        </div>
+                                    </div>
+                                <div class="form-group" style="margin-top:5px;margin-bottom:15px;" >
+                                    <label class="col-sm-3 control-label">Choose Album</label>
+                                    <div class="col-sm-6">
+                                        <select name="seclectAlbum"class="col-sm-2 form-control"  >
+                                            <option value="noAlbum" selected >No Album</option>
+                                            <!-- BEGIN: ALBUM -->
+                                            <option value="{ALBUM.id}">{ALBUM.album}</option>
+                                            <!-- END: ALBUM -->
+                                        </select> 
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group"style="margin-top:5px;margin-bottom:15px;">
+                                    <label class="col-sm-3 control-label">Upload image</label>
+                                    <div class="col-sm-6" id="upfile">
+                              
+                                        <input type='file' name='img_upload[]' class='form-control'  >    
+                                    </div>
+                                    <div class="col-sm-4">
+                              
+                                            <input type="button" id='addfile' class="btn btn-success pull-right" value="Add File">    
+                                    </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-sm-offset-4 col-sm-8">
+                                            <a href="#" class="btn btn-default" onclick="onresert();">Reset</a>
+                                            <button name="add" value="img" type="submit" class="btn btn-primary wizard-next">Add Image</button>
+                                        </div>
+                                    </div>
+                            </div>
+                        </form>
+                         <!-- hết mục add img -->
+                        <form method="POST" name="addalbum" action="#" accept-charset="UTF-8" role="form" class="form-horizontal group-border-dashed" style="border-radius: 0px;" id="form_equipment" enctype="multipart/form-data">
+
+                               
+                            <div id="showAlbum"    >
+                                    <div class="form-group" style="margin-top:5px;margin-bottom:15px;">
+                                            <label class="col-sm-3 control-label"><strong>{mess_img1}</strong></label>
+                                            <div class="col-sm-9" style="margin-top:7px;color:red;">
+                                                <span>{mess_img2}</span>  
+                                            </div>
+                                    </div>
+                                    
+                                    <div class="form-group" style="margin-top:5px;margin-bottom:15px;">
+                                            <label class="col-sm-3 control-label">Album Title</label>
+                                            <div class="col-sm-6">
+                                                <input value="{album_title}" placeholder="" class="form-control" name="txtAlbum" type="text" required> 
+                                            </div>
+                                        </div>
+                                    
+                                    <div class="form-group"style="margin-top:5px;margin-bottom:15px;">
+                                        <label class="col-sm-3 control-label">Upload image</label>
+                                        <div class="col-sm-6" >
+                                  
+                                            <input type='file' name='album_upload[]' multiple="multiple" class='form-control'  >    
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                            <div class="col-sm-offset-4 col-sm-8">
+                                                <a href="#" class="btn btn-default" onclick="onresert();">Reset</a>
+                                                <button name="add" value="album" type="submit" class="btn btn-primary wizard-next">Add Album</button>
+                                            </div>
+                                    </div>
+                            </div>
+                        </form>
+                    
+                </div>
+            </div>
+        </div>	
+    </div>
+       
+    <footer class="footer text-center"> 2019 &copy;  Admin ProTeam </footer>
+<script>
+$(document).ready(function(){
+        $("#addfile").click(function(){
+            $("#upfile").append("<input type='file' name='img_upload[]' class='form-control'> ")
+        });
+    });
+$(document).ready(function(){
+    $("#addImg").click(function(){
+        $("#showAlbum").hide();
+        $("#showImg").show();
+    });
+});  
+$(document).ready(function(){
+    $("#addAlbum").click(function(){
+        $("#showImg").hide();
+        $("#showAlbum").show();
+    });
+}); 
+</script>
+
+
+<!-- END: ADD -->

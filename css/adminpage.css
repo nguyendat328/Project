@@ -1,0 +1,147 @@
+.navbar{
+    background:rgb(114, 114, 114) !important;
+
+}
+.navbar-toggler-icon{
+
+}
+
+.navbar .navbar-branch{
+margin:0!important;
+padding:0!important;
+}
+.navbar .navbar-branch img{
+
+    height:50px;
+    width:auto;
+}
+.navbar .navbar-branch a{
+    color:#fff;
+}
+.navbar .navbar-branch a:hover{
+    color:#fff;
+    text-decoration: none;
+}
+/* .navbar .navbar-collapse{
+    width:70%; 
+    float:right;
+    display:flex;
+    justify-content: flex-end;
+    background: lightblue;
+} */
+/* @media only screen and (max-width:800px){
+    #topNav .navbar-nav{
+    display:none;
+    }
+    #header #topNav .logo{
+        width:800px;
+       
+    }
+} */
+.navbar .navbar-collapse .navbar-nav  .nav-item {
+    display:block;
+    margin-top:10px;
+}
+.navbar .navbar-collapse .navbar-nav  .nav-item .goback {
+    height: auto;
+    width:20px;
+}
+.navbar .navbar-collapse .navbar-nav .nav-item a {
+    color:#fff;
+    text-decoration: none;
+}
+.navbar .navbar-collapse .navbar-nav .nav-item a {
+    color:#fff;
+    text-decoration: none;
+}
+.navbar .navbar-collapse .navbar-nav .nav-item .btnContact{
+    color: #FFF;
+    padding:7px 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:13px;
+}
+.navbar .navbar-collapse .navbar-nav  .nav-item .btnIcon-link{
+    width:10px;
+    height:auto;
+    padding:7px 8px;
+}
+/*
+#topNav .dropdown,.dropdown-menu,.dropdown-item,.btn{
+    padding:0 !important;
+    margin:0 !important;
+    border:none !important;
+    font-size:14px;
+    color:#FFF;
+}
+#topNav .dropdown .btn:focus{
+    box-shadow: none !important;
+}
+#topNav .dropdown .dropdown-menu{
+    
+    background:transparent;
+    position: absolute;
+    top:0px;
+    left:0;
+    transform: translate3d(0px, 30px, 0px) !important;
+    border-radius:0px !important;
+   }
+#topNav .dropdown .dropdown-menu .dropdown-item{
+    display:block;
+    background:#000;
+    width:70px !important;
+    padding:0 !important;
+}
+#topNav .btn:hover,.dropdown-item:hover{
+    background:#000;
+    color:rgba(199, 198, 198, 0.842);
+}
+#midNav .navbar{
+    background:rgba(73, 72, 72, 0.103) !important;
+}
+#midNnav .navbar-toggler{
+    background: lightblue !important;
+  
+}
+#topNnav .navbar-toggler{
+    background: lightblue !important;
+  
+}
+.btnMenu{
+    display: none;
+}
+
+.btnMenu{
+    position: absolute;
+    top:5px;
+    left:5px;
+    height:40px;
+    width:45px;
+    border: 1px solid rgba(255, 255, 255, 0.521);
+    z-index:1000;
+}
+.btnMenu .top, .mid,.bot{
+    position:absolute;
+    width:35px;
+    height:4px;
+    left:3.5px;
+    background:#fff;
+    transition: 0.5s;
+}
+.btnMenu .top{
+    top:5px;
+    
+}
+.btnMenu .bot{
+    bottom:5px;
+}
+.btnMenu .mid{
+    top:17px;
+}
+.btnMenu:hover>.top{
+    transform: translateY(-50%) rotate(45deg);
+}
+
+
+
+
+

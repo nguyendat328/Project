@@ -1,0 +1,83 @@
+<!-- BEGIN: EDIT -->
+<script>
+    function onresert(){
+        var f           = document.add;
+        var title        = f.txtTitle.value ="";
+      
+        
+        var sub         = f.s_content.value="" ; 
+        var full        = f.f_content.value="" ;
+    
+    }
+    </script>
+        <div class="row bg-title">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                <h4 class="page-title">TYPE DOG</h4>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="white-box">
+                    <form method="POST" name="add" action="#" accept-charset="UTF-8" role="form" class="form-horizontal group-border-dashed" style="border-radius: 0px;" id="form_equipment" enctype="multipart/form-data"><input name="_token" type="hidden" value="KP4b4mMmjbMhX1EFSNetmsk07ZwB2lsN0npOgotc">
+                        <input type="hidden" name="_token" value="1">
+                    
+                        <div class="header">
+                            <h3>Edit page </h3>
+                            
+                        </div>
+                       
+                        <div class="form-group" style="margin-top:5px;margin-bottom:15px;">
+                                <label class="col-sm-3 control-label"><strong>{mess_img1}</strong></label>
+                                <div class="col-sm-9" style="margin-top:7px;color:red;">
+                                    <span>{mess_img2}</span>  
+                                </div>
+                        </div>
+                       
+                        <div class="form-group" style="margin-top:5px;margin-bottom:15px;">
+                            <label class="col-sm-3 control-label">Title</label>
+                            <div class="col-sm-6">
+                                <input value="{title}" placeholder="" class="form-control" name="txtTitle" type="text" required> 
+                            </div>
+                        </div>          
+                       
+                        <div class="form-group" style="margin-top:5px;margin-bottom:15px;">
+                            <label class="col-sm-3 control-label">Subcontent</label>
+                            <div class="col-sm-9">
+                                <textarea name="s_content" id="short_content" class="form-control" style="height:60px;" required>{subcontent}</textarea>
+                            </div>
+                        </div>
+                        <div class="form-group"style="margin-top:5px;margin-bottom:15px;">
+                            <label class="col-sm-3 control-label">Fullcontent*</label>
+                            <div class="col-sm-9">
+                                <textarea name="f_content" id="content" class="rich_text" required>{fullcontent}</textarea>
+                            </div>
+                        </div>
+                        
+                            <div class="form-group"style="margin-top:5px;margin-bottom:15px;">
+                                <label class="col-sm-3 control-label">Upload image</label>
+                                <div class="col-sm-6">
+                          
+                                    <input type="file" name="image_upload" id="image_upload" class="form-control">
+                                    <br>
+                                    <span>If you do not select a new file, the old file do not to be changed! </span>     
+                                </div>
+                            </div>
+
+                            
+                        
+                        <div class="row">
+                            <div class="col-sm-offset-4 col-sm-8">
+                                <a href="#" class="btn btn-default" onclick="onresert();">Clear All</a>
+                                <button id="form_submit" type="submit" class="btn btn-primary wizard-next">Update infomation</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>	
+    </div>
+       
+    <footer class="footer text-center"> 2019 &copy;  Admin ProTeam </footer>
+
+<!-- END: EDIT -->

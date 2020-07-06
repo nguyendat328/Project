@@ -1,0 +1,150 @@
+<!-- BEGIN: DOG -->
+<div class="box-dog-type pro">
+    <div class="bg-img " style="position: absolute; width: 100%;">
+        <img src="img/baner1.png" alt="" class="w-100">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="dog-type-title">
+                    <div class="line-up">
+                        <img src="img/noodles3.png" alt="">
+                    </div>
+                    <div class="text">
+                        <h1>DOGS</h1>
+                    </div>
+                    <div class="line-down">
+                        <img src="img/noodles3.png" alt="">
+                    </div>
+                </div>
+                <div class="link-type-dog">
+                    <a href="?m=tables&a=Home" class="mr-3">
+                        <img src="img/icon_home.png" alt="">
+                    </a>
+                    <i class="fa fa-angle-right mr-3" aria-hidden="true" ></i>
+                    <a href="#" class="mr-3">Dogs</a>
+                    <!-- <i class="fa fa-angle-right mr-3" aria-hidden="true" ></i>
+                    <a href="#">Husky</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="box-dog-type-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="dog-type-search">
+                    <form  method="GET" class="frm-search pro">
+                        <input type="hidden" name="m" value="tables" >
+                        <input type="hidden" name="a" value="Dogs" >
+
+                        <input type="text" name="dogSearch" id="" class="inp-search" placeholder="Tìm kiếm">               
+                        <button class="btn-search" name = "btn-search" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dog-type-list">
+        <div class="container " >
+            <div class="row ">
+
+                <div class="col-md-8 ">
+                    <!-- BEGIN: listdog -->
+                    <div class="listdog d-flex mb-3">
+                        <div class="listdog-img mr-3">
+                            <a href="?m=Dogs&a=detail&detail={LIST.id}">
+                                <img src="{baseUrl}/admin/img/{LIST.img}" alt=""  width="170" height="170">
+                            </a>
+                        </div>
+                        <div class="dog-type-content">
+                            <div class="listdog-name">
+                                <h3><a href="?m=Dogs&a=detail&detail={LIST.id}">{LIST.dog_name}</a></h3>
+                            </div>
+                            <div class="listdog-text justify" >
+                                <p>{LIST.subcontent}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: listdog -->
+                </div>
+
+                <div class="col-md-4 ">
+                    <div class="more-care">
+                        <div class="more-care-toppic mb-5 ">
+                            <h3>Highlight Dogs</h3>
+                        </div>
+                        <!-- BEGIN: moredog -->
+                        <div class="dog-type-content d-flex mb-3">
+                            <div class="mr-3">
+                                <a href="?m=Dogs&a=detail&detail={moredog.id}">
+                                    <img src="{baseUrl}/admin/img/{moredog.img}" alt="" width="110px" height="110px">
+                                </a>
+                            </div>
+                            <div class="new-menu">
+                                
+                                <div class="new-title">
+                                    <a href="?m=Dogs&a=detail&detail={moredog.dog_name}">
+                                        <h3>{moredog.dog_name}</h3>
+                                    </a>
+                                </div>
+                                <div class="new-content content-sub justify" >
+                                    <p>{moredog.subcontent}</p>
+                                </div>
+                                <div class="new-time d-flex justify-content-between w-100">
+                                    
+                                    <a href="?m=Dogs&a=detail&detail={moredog.id}">
+                                        <img src="{baseUrl}/img/icon_readmore.png" alt="">
+                                        Đọc thêm
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END: moredog -->
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="see-more">
+                            <a href="?m=tables&a=Dogs">See more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <hr>
+        </div>
+    </div>
+    <div class="line-page">
+        <div class="container">
+            <div class="row">
+                <ul class="list-number"> 
+                    <li class="{prev}">
+                        <a href="?m=tables&a=Dogs&page={pre}"><img src="img/icon_prevert.png" alt=""></a>
+                    </li>
+                    <!-- BEGIN: PAGE -->
+                    <li class="list-page-item {active} ">
+                        <a href="?m=tables&a=Dogs&page={i}">{i}</a>
+                    </li>
+                    <!-- END: PAGE -->
+                    <li class="{next}">
+                        <a href="?m=tables&a=Dogs&page={next1}"><img src="img/Icon_next.png " alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        new showHideText('.content-sub', {
+            charQty     : 80,
+            ellipseText :"..."
+        });
+        
+    });
+</script>
+<!-- END: DOG -->

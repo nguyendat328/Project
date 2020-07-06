@@ -1,0 +1,141 @@
+<!-- BEGIN: fooddetail -->
+<div class="box-dog-qg pro">
+    <div class="bg-img " style="position: absolute; width: 100%;">
+        <img src="img/banner2.png" alt="" class="w-100">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="dog-type-title">
+                    <div class="line-up">
+                        <img src="img/noodles3.png" alt="">
+                    </div>
+                    <div class="text">
+                        <h1>Foods</h1>
+                    </div>
+                    <div class="line-down">
+                        <img src="img/noodles3.png" alt="">
+                    </div>
+                </div>
+                <div class="link-type-dog">
+                    <a href="?m=tables&a=Home" class="mr-3">
+                        <img src="img/icon_home.png" alt="">
+                    </a>
+                    <i class="fa fa-angle-right mr-3" aria-hidden="true" ></i>
+                    <a href="?m=tables&a=Dogs" class="mr-3">Dogs</a>
+                    <i class="fa fa-angle-right mr-3" aria-hidden="true" ></i>
+                    <span href="#">{morefood.title}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="box-dog-type-2">
+    <div class="container">
+        <div class="row">
+            <!-- BEGIN: morefood -->
+            <div class="col-md-5">
+                <div class="morefood-img">
+                    <img src="{baseUrl}admin/img/{morefood.img}" alt="" class="w-100">
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="morefood-content">
+                    <div class="morefood-title">
+                        <h3>{morefood.title}</h3>
+                    </div>
+                    <div class="morefood-sub justify">
+                        <p>{morefood.subcontent}</p>
+                    </div>
+                    <div class="morefood-more ">
+                        <div class="morefood-name d-flex">
+                            <span class="fix-w">Country:</span>
+                            <span>{morefood.origin}</span>
+                        </div>
+                        <div class="morefood-price d-flex">
+                            <span class="fix-w">Price: </span>
+                            <span>{morefood.price} USD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="mt-5">
+                    <hr>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="morefood-gt">
+                    <h3>Introduce:</h3>
+                </div>
+                <div class="morefood-full justify">
+                    <p>{morefood.fullcontent}</p>
+                </div>
+            </div>
+            <!-- END: morefood -->
+
+        </div>
+    </div>
+</div>
+<div class="container my-5 ">
+    <div class="row align-items-center justify-content-between">
+        <div class="left-img">
+            <img src="img/noodles_left.png" alt="">
+        </div>
+        <div class="title">
+            <h1>Other Foods</h1>
+        </div>
+        <div class="right-img">
+            <img src="img/noodles_right.png" alt="">
+        </div>
+    </div>
+</div>
+<div class="tab-content ">
+    <div class="container ">
+        <div class="row justify-content-start">
+            
+            <!-- BEGIN: moreitem -->
+            <div class="col-md-4 ">
+                <div class="dog-type-content">
+                    <a href="?m=Foods&a=detail&detail={moreitem.id}">
+                        <img src="admin/img/{moreitem.img}" alt="" height="238px" width="360px">
+                    </a>
+                    <div class="new-menu mt-3">
+                        <div class="new-title">
+                            <a href="?m=Foods&a=detail&detail={moreitem.id}">
+                                <h3>{moreitem.title}</h3>
+                            </a>
+                        </div>
+                        <div class="new-content " >
+                            <p class="morecontent" >${moreitem.price}</p>
+                        </div>
+                        <div class="new-content justify" >
+                            <p class="morecontent" >{moreitem.subcontent}</p>
+                        </div>
+                        <div class="more-detail">
+                            <a href="?m=Foods&a=detail&detail={moreitem.id}">
+                                <img src="img/icon_readmore.png" alt="">
+                                Read more
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END: moreitem -->
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="see-more">
+                <a href="?m=tables&a=Foods">See more</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="mb-5">
+            <hr>
+        </div>
+    </div>
+</div>
+<!-- END: fooddetail -->

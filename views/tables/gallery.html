@@ -1,0 +1,113 @@
+<!--BEGIN: GALLERY-->
+<link rel="stylesheet" href="{baseUrl}/css/gallerys.css">
+<script>
+    $(document).ready(function(){
+        $(".blur").click(function(){
+            $("#flipInY").hide();
+            $(".blur").hide();
+            });
+            $(".blur").hide()
+
+    });
+    $(document).ready(function(){
+        $("#showAlbum").click(function(){
+            $(".blur").show()
+            });  
+    });
+    function showAlbum(_id){
+        window.location.href="?m=tables&a=album&ida="+_id;
+    }
+</script>
+ <div class="blur">
+
+</div>
+<div class="box-dog-anh pro">
+    <div class="bg-img " >
+        <img src="img/banner5.png" alt="" class="w-100">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="dog-type-title">
+                    <div class="line-up">
+                        <img src="img/noodles3.png" alt="">
+                    </div>
+                    <div class="text">
+                        <h1>Gallery</h1>
+                    </div>
+                    <div class="line-down">
+                        <img src="img/noodles3.png" alt="">
+                    </div>
+                </div>
+                <div class="link-type-dog">
+                    <a href="?m=tables&a=Home" class="mr-3">
+                        <img src="img/icon_home.png" alt="">
+                    </a>
+                    <i class="fa fa-angle-right mr-3" aria-hidden="true" ></i>
+                    <a href="?m=tables&a=Gallery" class="mr-3">Gallery</a>
+                    <i class="fa fa-angle-right mr-3" aria-hidden="true" ></i>
+                    <a href="?m=tables&a=Gallery" class="mr-3">All Image</a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="box-dog-type-2">
+    
+    <div class="gallery">
+        
+        <div class="container">
+            <div class="btn-group dropdown m-r-10">
+                <button id="showAlbum" aria-expanded="false" data-toggle="dropdown" 
+                class="btn btn-success dropdown-toggle waves-effect waves-light" type="button">List Album <span class="caret"></span></button>
+                <ul role="menu" class="dropdown-menu animated flipInY showAlbum" >
+                    <li><a href="{baseUrl}?m=tables&a=Gallery">All Image</a></li>
+                    <!-- BEGIN: LIST_ALBUM -->
+                    <li class="divider"></li>
+                    <li><a href="#" onclick="showAlbum({LIST_ALBUM.id});">{LIST_ALBUM.album}</a></li>
+                     <!-- END: LIST_ALBUM -->
+                    
+                </ul>
+            </div>
+
+            <ul id="lightgallery" class="row justify-content-around">
+                <!-- BEGIN: IMG -->
+                <li class="album" data-src="{baseUrl}/admin/img/{LIST.img}">
+                    <img src="{baseUrl}/admin/img/{LIST.img}"  height="263px" width="262px" />
+                </li>
+                <!-- END: IMG -->
+                
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="mt-5">
+            <hr>
+        </div>
+    </div>
+    <div class="line-page">
+        <div class="container">
+            <div class="row">
+                <ul class="list-number"> 
+                    <li class="{prev}">
+                        <a href="?m=tables&a=Gallery&page={pre}"><img src="img/icon_prevert.png" alt=""></a>
+                    </li>
+                    <!-- BEGIN: PAGE -->
+                    <li class="list-page-item {active} ">
+                        <a href="?m=tables&a=Gallery&page={i}">{i}</a>
+                    </li>
+                    <!-- END: PAGE -->
+                    <li class="{next}">
+                        <a href="?m=tables&a=Gallery&page={next1}"><img src="img/Icon_next.png " alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--END: GALLERY-->

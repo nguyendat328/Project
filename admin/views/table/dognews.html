@@ -1,0 +1,223 @@
+<!-- BEGIN: DOGCARE_TABLE -->
+<script>     
+	function onCkeckAll(){
+        var f = document.frmTable;
+	    var cki = document.getElementsByName('ckOne');
+	
+		if(f.ckAll.checked==true){
+			for(let i=0; i<cki.length; i++){
+				cki[i].checked = true;
+			}
+		}else{
+			for(let i=0; i<cki.length; i++){
+				cki[i].checked = false;
+			}
+		}
+	}
+	function getId(_ckName){
+		var arr = new Array();
+		var f = document.frmTable;
+		var cki = document.getElementsByName(_ckName);
+		for(i=0; i<cki.length; i++){
+			if(cki[i].checked === true){
+				arr.push(cki[i].value);
+			}
+		}
+		if(arr.length==0){
+			return false;
+		}else{
+			return arr;
+        }
+      
+    }
+    function onDeleteAll(){
+		var f = document.frmTable;
+		var cki = document.getElementsByName('ckOne');
+        var lsId = getId('ckOne');
+       	if(lsId===false){
+			alert("Please choose at least one");
+			return false;
+		}else{
+            var per=document.getElementById('readPer').value;
+				if(per=="manager"){
+					alert("You do not have permission for this action!");
+					
+				}else{
+                    
+                    if(confirm("Do you want to delete?")){
+                        //DELETE FROM tbl WHERE ID IN (1,2,5);
+        
+                        listID = lsId.join(',');
+        
+                        window.location.href = "?m=dognews&a=delete&lsid="+listID;	
+                    }
+                }
+		}
+	}
+    function onAdd(){
+		window.location.href="?m=Dognews&a=add";
+	}
+    function onDelete(_id){
+        var per=document.getElementById('readPer').value;
+				if(per=="manager"){
+					alert("You do not have permission for this action!");
+					
+				}else{
+                    
+                    if(confirm("Do you want to delete this record?")){
+                        window.location.href="?m=dognews&a=delete&id="+_id;
+                    }
+                }
+    }
+    function onEdit(_id){
+        if(confirm("Do you want to edit this record?")){
+            window.location.href="?m=Dognews&a=edit&id="+_id;
+        }
+    }
+    function setLimit(){
+        var s= document.getElementById('txtLimit').value;
+        window.location.href="?m=table&a=Dognews&limit="+s;
+      
+       
+    }
+    function onsethighlight(_id){
+        var url;
+        var data;
+        
+        url="{baseUrl}/admin/ajax/news/sethighlight.php?id="+_id;
+        $("#sethighlight").load(url);
+	}
+
+
+</script>
+<link rel="stylesheet" href="{baseUrl}/admin/css/highlight.css">
+<input type="hidden" id="sethighlight">
+<form method='POST' name='frmTable'>
+<div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+            <h4 class="page-title">News</h4>
+        </div>
+    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+        <input type="submit" value="Tìm kiếm" class="btn btn-primary pull-right m-l-20"  style="margin-top:5px;">
+        <ol class="breadcrumb">
+            <li>
+                    <input type="search" name="search" class=" form-control input-sm" placeholder="" autocomplete="off" aria-controls="datatable-icons">
+
+            </li>
+            
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="white-box">
+            <h3 class="box-title"><strong>Table : news of dogs</strong></h3>
+            <div id="datatable-icons_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                <div class="row table-responsive">
+                    <div class="col-sm-12">
+                        <div id="datatable-icons_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="dataTables_length" id="datatable-icons_length">
+                                        <label>Show
+                                            <select  id="txtLimit" aria-controls="datatable-icons" class="form-control input-sm" onchange="setLimit();">
+                                                <option value="5"{select5}>5</option>
+                                                <option value="10"{select10}>10</option>
+                                                <option value="20"{select20}>20</option>
+                                            </select> record.  
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="pull-right">
+                                        <button type="button" class="btn btn-success" style="margin-right:5px;" onclick="onAdd();">Add</button>
+                                        <button type="button" class="btn btn-danger pull-right" style="margin-right:5px;" onclick="onDeleteAll();">Delete</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <!-- PHẦN BẢNG=--------------------------->
+                                        <table id="datatable-icons" class="table table-striped dataTable no-footer" role="grid" aria-describedby="datatable-icons_info">
+                                            <thead>
+                                                <tr role="row">
+                                                        <th style="width: 26px;" class="sorting_asc" tabindex="0" aria-controls="datatable-icons" rowspan="1" colspan="1" aria-sort="ascending" aria-label="STT: activate to sort column descending"><strong>#</strong></th>
+                                                        <th style="width: 26px;" class="sorting_asc" tabindex="0" aria-controls="datatable-icons" rowspan="1" colspan="1" aria-sort="ascending" aria-label="ID: activate to sort column descending"><strong>ID</strong></th>
+                                                        <th style="width: 120px;" class="sorting" tabindex="0" aria-controls="datatable-icons" rowspan="1" colspan="1" aria-label="Ảnh: activate to sort column ascending"><strong>Image</strong></th>
+                                                        <th class="sorting" tabindex="0" aria-controls="datatable-icons" rowspan="1" colspan="1" aria-label="Tên loại chó: activate to sort column ascending" style="width: 350px;"><strong>Title</strong></th>
+                                                        <th style="width: 100px;" class="sorting_disabled" rowspan="1" colspan="1" aria-label="Thao tác"><strong>Action</strong></th>
+                                                        <th style="width: 70px;" rowspan="1" colspan="1" aria-label="highlight"><strong>Highlight</strong></th>
+
+                                                        <th style="width: 80px;" tabindex="0" aria-controls="datatable-icons" rowspan="1" colspan="1"><input type='checkbox' name='ckAll' onclick='onCkeckAll();' /></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!-- BEGIN: CONTENT -->
+                                                <tr role="row" class="odd">
+                                                    <td class="sorting_1">{CONTENT.i}</td>
+                                                    <td class="sorting_1">{CONTENT.id}</td>
+                                                    <td> 
+                                                        <img style="width: 80px;" src="{baseUrl}admin/img/{CONTENT.img}">
+                                                          
+                                                    </td>
+                                                    <td>
+                                                        <strong>{CONTENT.title}</strong>
+                                                    <br>
+                                                        <i>{CONTENT.subcontent}</i>
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-info btn-margin" href="#" onclick="onEdit({CONTENT.id})">
+                                                            <i class="fa fa-pencil"></i>
+                                                        </a>
+                                                        <a href="#" class="delete_equipment btn btn-danger btn-margin" name="delete" onclick="onDelete({CONTENT.id});">
+                                                            <i class="fa fa-times"></i>
+                                                        </button>
+                                                    </td>
+                                                    <td>
+                                                        <label class="switch">
+                                                            <input type="checkbox" {check} onclick="onsethighlight({CONTENT.id});">
+                                                            <span class="slider"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td> <input type='checkbox' id='ckOne' name='ckOne' value='{CONTENT.id}' onclick ='getId()' /></td>
+                                                </tr>
+                                                <!-- END: CONTENT -->
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-5">
+                                        <div class="dataTables_info" id="datatable-icons_info" role="status" aria-live="polite">{mess}</div>
+                                    <div class="dataTables_info" id="datatable-icons_info" role="status" aria-live="polite">Display form {s} to {nas} of {total} record.</div>
+                                </div>
+                                <div class="col-sm-7">
+                                    <div class="dataTables_paginate paging_simple_numbers" id="datatable-icons_paginate">
+                                        <ul class="pagination">
+                                            <li class="paginate_button previous {prev}" id="datatable-icons_previous">
+                                                <a href="{baseUrl}admin/?m=table&a=dognews&page={p}" aria-controls="datatable-icons" data-dt-idx="0" tabindex="0">Prev</a>
+                                            </li>
+                                            <!-- BEGIN: S_PAGE -->
+                                            <li class="paginate_button {active}">
+                                                <a href="{baseUrl}admin?m=table&a=dognews&page={i}" aria-controls="datatable-icons" data-dt-idx="{i}" tabindex="0">{i}</a>
+                                            </li>
+                                            <!-- END: S_PAGE -->
+                                           
+                                            <li class="paginate_button next {next}" id="datatable-icons_next">
+                                                <a href="{baseUrl}admin/?m=table&a=dognews&page={n}" aria-controls="datatable-icons"  tabindex="0">Next</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+<!-- END: DOGCARE_TABLE -->

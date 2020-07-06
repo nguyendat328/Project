@@ -1,0 +1,70 @@
+<!-- BEGIN: TABLE -->
+
+<form method='POST' name='frmTable'>
+<div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+            <h4 class="page-title">administrator</h4>
+        </div>
+   
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="white-box">
+            <h3 class="box-title"><strong>Table : {username} Profile</strong></h3>
+            <div id="datatable-icons_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                <div class="row table-responsive">
+                    <div class="col-sm-12">
+                        <div id="datatable-icons_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                            <div class="row">
+                                
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <!-- PHẦN BẢNG=--------------------------->
+                                        <table id="datatable-icons" class="table table-striped dataTable no-footer" role="grid" aria-describedby="datatable-icons_info">
+                                            <thead>
+                                                <tr role="row">
+                                                        <th style="width: 26px;" class="sorting_asc" tabindex="0" aria-controls="datatable-icons" rowspan="1" colspan="1" aria-sort="ascending" aria-label="#: activate to sort column descending">#</th>
+                                                        <th style="width: 26px;" class="sorting_asc" tabindex="0" aria-controls="datatable-icons" rowspan="1" colspan="1" aria-sort="ascending" aria-label="ID: activate to sort column descending">ID</th>
+                                                        <th style="width: 138px;" class="sorting" tabindex="0" aria-controls="datatable-icons" rowspan="1" colspan="1" aria-label="Image: activate to sort column ascending">Image</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="datatable-icons" rowspan="1" colspan="1" aria-label="UserName: activate to sort column ascending" style="width: 250px;">UserName</th>
+                                                        <th style="width: 188px;" class="sorting_disabled" rowspan="1" colspan="1" aria-label="Action">Email</th>
+                                                       
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                
+                                                <tr role="row" class="odd">
+                                                    <td class="sorting_1">{i}</td>
+                                                    <td class="sorting_1">{id}</td>
+                                                    <td>                                                   
+                                                        <img style="width: 100px;" src="{baseUrl}admin/img/{img}">
+                                                        <br>
+                                                    </td>
+                                                    <td>
+                                                        <strong>{username}</strong>
+                                                    <br>
+                                                        <i>Permission: {permission} ( {detail} )</i>
+
+                                                    </td>
+                                                    <td>
+                                                        {email}
+                                                    </td>
+                                                    
+                                                </tr>
+                                                
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+<!-- END: TABLE -->

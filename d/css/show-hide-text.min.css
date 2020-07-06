@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+.wrap{
+    max-width:960px;
+    width:100%;
+    margin:0 auto
+}
+.some-list {
+     color:#ececec 
+}
+.some-list .some-item {
+     background:#424242;
+     padding:20px 30px 10px;
+     position:relative;
+     margin-bottom:20px 
+}
+.some-list .some-item:last-of-type {
+     margin-bottom:0 
+}
+.some-list .some-item .item-header {
+     display:-ms-flexbox;
+     display:flex;
+     -ms-flex-align:center;
+     align-items:center;
+     line-height:24px 
+}
+.some-list .some-item .item-header i {
+     font-size:14px;
+     margin-right:10px;
+     -ms-flex-item-align:start;
+     align-self:flex-start 
+}
+/* .some-list .some-item .item-header i:after{
+    content:"♦"
+} */
+.some-list .some-item .item-header .header-title{
+    font-weight:700
+}
+.some-list .some-item .item-message{
+    margin:12px 0 20px;
+    padding:20px 0;
+    border-top:1px solid #828282;
+    border-bottom:1px solid #828282
+}
+.some-list .some-item .item-message .my-message{
+    font-size:14px;
+    line-height:22px
+}
+.morecontent span{
+    display:none
+}
+.morelink{
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-align:center;
+    align-items:center;
+    justify-content: center;
+    position:relative;
+    margin-top:20px;
+    font-size:13px;
+}
+
+
+ 

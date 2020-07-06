@@ -1,0 +1,210 @@
+<!-- BEGIN: LAYOUT -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{pagetitle}</title>
+    <link rel="shortcut icon" type="image/ico" href="{baseUrl}img/fabicon/favicon.ico"/>
+
+
+    <link rel="stylesheet" href="css/show-hide-text.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/lightgallery.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">        
+    <link rel="stylesheet" href="css/index_style.css">
+    <link href="css/animate.css" rel="stylesheet">
+
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/popper.js" type="text/javascript"></script>
+    <script src="js/lightgallery.min.js" type="text/javascript"></script>    
+    <script src="js/show-hide-text.min.js" type="text/javascript"></script>
+
+
+    <script src="js/slick.js" type="text/javascript"></script>
+    <script src="js/bootstrap.js" type="text/javascript"></script>
+
+</head>
+<body>
+    <header>
+        <div class="sm-menu">
+            <div class="container h-100">
+                <div class="row flex-end align-items-center h-100" >
+                    <div class="sm-contact d-flex ">
+                        <span>Follow Us: </span>
+                        <div class="social ml-3">
+                            <a href="{fb}" class="ml-2"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="{ins}" class="ml-2"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="{youtube}" class="ml-2"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="menu-lg">
+            <div class="container">
+                <div class="row">
+                    <nav class="navbar navbar-expand-lg navbar-light w-100 p-0 hg">
+                        <a class="navbar-brand" href="?m=tables&a=Home">
+                            <img src="img/logo.png" alt="">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        
+                        <div class="collapse navbar-collapse hg" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto h-100 d-flex align-items-center">
+                                <!-- BEGIN: MENU -->
+                                <li class="nav-item mr-3 {dasboard.active}">
+                                    <a class="nav-link " href="?m=tables&a={dasb_link}">{dasboard.name}</a>
+                                </li>
+                                <!-- END: MENU -->
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    {content}
+
+    
+    <div class="box-6">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="info-title">
+                        <h3>Infomation:</h3>
+                    </div>
+                
+
+                    <div class="more-info d-flex">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <p>{adress}</p>
+                    </div>
+                    <div class="more-info d-flex">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <p>{email}</p>
+                    </div>
+                    <div class="more-info d-flex">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+
+                        <p>{phone}</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-title">
+                        <h3>Follow Us:</h3>
+                    </div>
+                   
+                    <div>
+                        <div class="social ml-3 ">
+                            <a href="{fb}" class="ml-2"><i class="fa fa-facebook" style="font-size: 30px;" ></i></a>
+                            <a href="{ins}" class="ml-2"><i class="fa fa-instagram" style="font-size: 30px;" ></i></a>
+                            <a href="{youtube}" class="ml-2"><i class="fa fa-youtube-play" aria-hidden="true" style="font-size: 30px;"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div id="map">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer pro">
+            <p>Copy right 2019 © ProTeam</p>
+            <div class="toup">
+                <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+                <!-- <img src="./img/homepage/ic_up.svg" alt=""> -->
+            </div>
+        </div>
+    </footer>
+    
+
+
+    <script>
+        $(document).ready(function () {
+            $('.tab-item').click(function () {
+                $('.tab-item').removeClass('current');
+                $(this).addClass('current');
+            });
+            $('.tab-type-item').click(function () {
+                $('.tab-type-item').removeClass('current-2');
+                $(this).addClass('current-2')
+            });
+            $('.tab-new-item').click(function () {
+                $('.tab-new-item').removeClass('current-3');
+                $(this).addClass('current-3')
+            });
+            $('.toup').click(function(event) {
+                $('html,body').animate({scrollTop: 0},1400);
+            });
+            
+        });
+    </script>
+    <script>
+    
+    </script>
+    <script>
+        $('.multiple-items').slick({
+            autoplay: true,
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 1
+        });
+    </script>
+
+<script>
+    $(document).ready(function() {
+        new showHideText('.myContentfaq', {
+            charQty     : 250,
+            ellipseText :"...",
+            moreText    :"See more",
+            lessText    :"See more"
+        });
+        
+    });
+</script>
+    <script>
+        function initMap() {
+        var uluru = {lat: 21.0108623, lng: 105.8257319};
+            // Styles a map in night mode.
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: uluru,
+            zoom: 15,
+        });
+        var marker = new google.maps.Marker({position: uluru, map: map});
+        }
+    
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxZUzEbI2KlzCQOMs1sLqYv_38hjSHL-w&callback=initMap">
+    </script>
+    <script>
+        lightGallery(document.getElementById('lightgallery'));
+    </script>
+    <script>
+        $(document).ready(function() {
+            new showHideText('.myContent', {
+                charQty     : 250,
+                ellipseText :"...",
+                moreText    :"See more",
+                lessText    :"Hide"
+            });
+            
+        });
+    </script>
+    <script src="js/index_js.js" type="text/javascript"></script>
+
+</body>
+</html>
+<!-- END: LAYOUT -->

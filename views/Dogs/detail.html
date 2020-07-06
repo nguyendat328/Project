@@ -1,0 +1,173 @@
+<!-- BEGIN: detaildog -->
+<div class="box-dog-qg pro">
+    <div class="bg-img " style="position: absolute; width: 100%;">
+        <img src="img/banner2.png" alt="" class="w-100">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="dog-type-title">
+                    <div class="line-up">
+                        <img src="img/noodles3.png" alt="">
+                    </div>
+                    <div class="text">
+                        <h1>Dogs</h1>
+                    </div>
+                    <div class="line-down">
+                        <img src="img/noodles3.png" alt="">
+                    </div>
+                </div>
+                <div class="link-type-dog">
+                    <a href="?m=tables&a=Home" class="mr-3">
+                        <img src="img/icon_home.png" alt="">
+                    </a>
+                    <i class="fa fa-angle-right mr-3" aria-hidden="true" ></i>
+                    <a href="?m=tables&a=Dogs" class="mr-3">Dogs</a>
+                    <i class="fa fa-angle-right mr-3" aria-hidden="true" ></i>
+                    <span href="#">{more.dog_name}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="box-dog-type-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 ">
+                <!-- BEGIN: moredogdetail -->
+                <div class="dogdetail-content justify">
+                    <div class="dogdetail-title mb-5">
+                        <h3>{more.dog_name}</h3>
+                    </div>
+                    <div class="dogdetail-subcontent justify">
+                        <p>{more.subcontent}</p>
+                    </div>
+                    <div class="dogdetail-img">
+                        <img src="{baseUrl}admin/img/{more.img}" alt="" width="100%">
+                    </div>
+                    <div class="dogdetail-full mt-4">
+                        <p>{more.fullcontent}</p>
+                    </div>
+                </div>
+                
+                <!-- END: moredogdetail -->
+            </div>
+            <div class="col-md-4 ">
+                <div class="more-care">
+                    <div class="more-care-toppic mb-5 ">
+                        <h3>Highlight News</h3>
+                    </div>
+                    <!-- BEGIN: moredog -->
+                    <div class="dog-type-content d-flex mb-3">
+                        <div class="mr-3">
+                            <a href="?m=News&a=detail&detail={moredog.id}">
+                                <img src="{baseUrl}admin/img/{moredog.img}" alt="" width="110px" height="110px">
+                            </a>
+                        </div>
+                        <div class="new-menu">
+                            
+                            <div class="new-title">
+                                <a href="?m=News&a=detail&detail={moredog.id}">
+                                    <h3>{moredog.title}</h3>
+                                </a>
+                            </div>
+                            <div class="new-content content-sub justify" >
+                                <p>{moredog.subcontent}</p>
+                            </div>
+                            <div class="new-time d-flex justify-content-between w-100">
+                                
+                                <a href="?m=News&a=detail&detail={moredog.id}">
+                                    <img src="img/icon_readmore.png" alt="">
+                                    Read more
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: moredog -->
+
+                </div>
+                
+                <div class="row justify-content-center">
+                    <div class="see-more">
+                        <a href="?m=tables&a=news">See more</a>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="mb-5">
+        <hr>
+    </div>
+</div>
+<div class="container my-5 ">
+    <div class="row align-items-center justify-content-between">
+        <div class="left-img">
+            <img src="img/noodles_left.png" alt="">
+        </div>
+        <div class="title">
+            <h1>Other dogs</h1>
+        </div>
+        <div class="right-img">
+            <img src="img/noodles_right.png" alt="">
+        </div>
+    </div>
+</div>
+<div class="tab-content ">
+    <div class="container ">
+        <div class="row justify-content-start">
+            
+            <!-- BEGIN: moreitem -->
+            <div class="col-md-4 ">
+                <div class="dog-type-content">
+                    <a href="?m=Dogs&a=detail&detail={moreitem.id}">
+                        <img src="{baseUrl}admin/img/{moreitem.img}" alt="" height="238px" width="360px">
+                    </a>
+                    <div class="new-menu mt-3">
+                        <div class="new-title">
+                            <a href="?m=Dogs&a=detail&detail={moreitem.id}">
+                                <h3>{moreitem.dog_name}</h3>
+                            </a>
+                        </div>
+                        <div class="new-content justify " >
+                            <p class="morecontent" >{moreitem.subcontent}</p>
+                        </div>
+                        <div class="more-detail">
+                            <a href="?m=Dogs&a=detail&detail={moreitem.id}">
+                                <img src="img/icon_readmore.png" alt="">
+                                Read more
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END: moreitem -->
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="see-more">
+                <a href="?m=tables&a=Dogs">See more</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="mb-5">
+            <hr>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        new showHideText('.content-sub', {
+            charQty     : 80,
+            ellipseText :"..."
+        });
+        
+    });
+</script>
+<!-- END: detaildog -->

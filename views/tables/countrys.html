@@ -1,0 +1,104 @@
+<!-- BEGIN: COUNTRY -->
+<div class="box-dog-qg pro">
+    <div class="bg-img " style="position: absolute; width: 100%;">
+        <img src="img/banner2.png" alt="" class="w-100">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="dog-type-title">
+                    <div class="line-up">
+                        <img src="img/noodles3.png" alt="">
+                    </div>
+                    <div class="text">
+                        <h1>Countrys</h1>
+                    </div>
+                    <div class="line-down">
+                        <img src="img/noodles3.png" alt="">
+                    </div>
+                </div>
+                <div class="link-type-dog">
+                    <a href="?m=tables&a=Home" class="mr-3">
+                        <img src="img/icon_home.png" alt="">
+                    </a>
+                    <i class="fa fa-angle-right mr-3" aria-hidden="true" ></i>
+                    <a href="?m=tables&a=Countrys" class="mr-3">Country</a>
+                    <!-- <i class="fa fa-angle-right mr-3" aria-hidden="true" ></i>
+                    <a href="#">{}</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="box-dog-type-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="dog-type-search">
+                    <form  method="GET" class="frm-search pro">
+                        <input type="hidden" name="m" value="tables" />
+                        <input type="hidden" name="a" value="Countrys" />
+                        <input type="text" name="countrySearch" id="" class="inp-search" placeholder="Search">               
+                        <button name="btn-search" class="btn-search" type= "submit"><i class="fa fa-search" aria-hidden="true" ></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="container">
+        <div class="row justify-content-center">
+            <ul class="nav nav-tabs d-flex dog-type-tab" >
+                
+                <li class="tab-type-item {LIST.active}" >
+                    <a href="#" data-toggle="tab">{LIST.countryname}</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div> -->
+    <div class="dog-type-list">
+        <div class="container " >
+            <div class="row justify-content-between">
+                <!-- BEGIN: quocgia -->
+                <div class="col-md-3 " >
+                    <div class="dog-type-content " >
+                        <a href="?m=Countrys&a=detail&detail={LIST.id}">
+                            <img src="{baseUrl}admin/img/{LIST.img}" alt="" class="w-100" style="height: 170px;">
+                        </a>
+                        <div class="food-name mt-3 mb-4">
+                            <p><a href="#">{LIST.subcontent}</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- END: quocgia -->
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <hr>
+        </div>
+    </div>
+    <div class="line-page">
+        <div class="container">
+            <div class="row">
+                <ul class="list-number"> 
+                    <li class="{prev}">
+                        <a href="?m=tables&a=Countrys&page={pre}"><img src="img/icon_prevert.png" alt=""></a>
+                    </li>
+                    <!-- BEGIN: PAGE -->
+                    <li class="list-page-item {active} ">
+                        <a href="?m=tables&a=Countrys&page={i}">{i}</a>
+                    </li>
+                    <!-- END: PAGE -->
+                    <li class="{next}">
+                        <a href="?m=tables&a=Countrys&page={next1}"><img src="img/Icon_next.png " alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- END: COUNTRY -->

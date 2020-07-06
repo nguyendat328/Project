@@ -1,0 +1,117 @@
+<!-- BEGIN: FOOD -->
+
+<script>
+    function showId(id){	
+        window.location.href = "?m=tables&a=Foods&id="+id;
+    }
+</script>
+
+<div class="box-dog-food pro">
+    <div class="bg-img ">
+        <img src="img/banner3.png" alt="" class="w-100">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="dog-type-title">
+                    <div class="line-up">
+                        <img src="img/noodles3.png" alt="">
+                    </div>
+                    <div class="text">
+                        <h1>Foods</h1>
+                    </div>
+                    <div class="line-down">
+                        <img src="img/noodles3.png" alt="">
+                    </div>
+                </div>
+                <div class="link-type-dog">
+                    <a href="#" class="mr-3">
+                        <img src="img/icon_home.png" alt="">
+                    </a>
+                    <i class="fa fa-angle-right mr-3" aria-hidden="true" ></i>
+                    <a href="?m=tables&a=foods" class="mr-3">Foods</a>
+                    <i class="fa fa-angle-right mr-3" aria-hidden="true" ></i>
+                    <a href="?m=tables&a=foods{id_f}" class="mr-3">{catagory} </a>
+                    {but}
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="box-dog-type-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="dog-type-search">
+                    <form action="#" method="POST" class="frm-search pro">
+                        <input type="text" name="search" id="" class="inp-search" placeholder="Tìm kiếm">               
+                        <button class="btn-search"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <ul class="nav nav-tabs d-flex dog-type-tab " >
+                <!-- BEGIN: CATEGORY -->
+                <form action="#" method="POST">
+                    <li class="tab-type-item " >
+                       <a href="#"  onclick = 'showId({CATEGORY.id});' data-toggle="tab"><strong>{CATEGORY.catalogies}</strong></a> 
+                    </li>
+                </form>
+                <!-- END: CATEGORY -->
+            </ul>
+        </div>
+    </div>
+    <div class="dog-type-list">
+        <div class="container " >
+            <div class="row justify-content-between">
+                <!-- BEGIN: DETAIL -->
+                    <div class="col-md-3 ">
+                        <a href="?m=Foods&a=detail&detail={DETAIL.id}">
+                            <div class="dog-type-content">
+                                <img src="{baseUrl}admin/img/{DETAIL.img}" alt="" class="w-100" width="263" height="263">
+                                <div class="food-name">
+                                    <p>{DETAIL.title} </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                <!-- END: DETAIL -->
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div >
+            <hr>
+        </div>
+    </div>
+    <div class="line-page" >
+        <div class="container" >
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="dataTables_paginate paging_simple_numbers" id="datatable-icons_paginate">
+                        <ul class="list-number"> 
+                            <li class="{prev}">
+                                <a href="?m=tables&a=Foods{id_f}&page={p}"><img src="img/icon_prevert.png" alt=""></a>
+                            </li>
+                            <!-- BEGIN: S_PAGE -->
+                            <li class="list-page-item {active} ">
+                                <a href="?m=tables&a=Foods{id_f}&page={i}">{i}</a>
+                            </li>
+                            <!-- END: S_PAGE -->
+                            <li class="{next}">
+                                <a href="?m=tables&a=Foods{id_f}&page={n}"><img src="img/Icon_next.png " alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- END: FOOD -->

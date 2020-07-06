@@ -1,0 +1,208 @@
+<!-- BEGIN: TABLE -->
+
+
+<script> 
+      
+	function onCkeckAll(){
+        var f = document.frmTable;
+	    var cki = document.getElementsByName('ckOne');
+	
+		if(f.ckAll.checked==true){
+			for(let i=0; i<cki.length; i++){
+				cki[i].checked = true;
+			}
+		}else{
+			for(let i=0; i<cki.length; i++){
+				cki[i].checked = false;
+			}
+		}
+	}
+	function getId(_ckName){
+		var arr = new Array();
+		var f = document.frmTable;
+		var cki = document.getElementsByName(_ckName);
+		for(i=0; i<cki.length; i++){
+			if(cki[i].checked === true){
+				arr.push(cki[i].value);
+			}
+		}
+		if(arr.length==0){
+			return false;
+		}else{
+			return arr;
+        }
+      
+    }
+    function onDeleteAll(){
+		var f = document.frmTable;
+		var cki = document.getElementsByName('ckOne');
+        var lsId = getId('ckOne');
+       	if(lsId===false){
+			alert("Please choose at least one");
+			return false;
+		}else{
+			if(confirm("Do you want to delete?")){
+                //DELETE FROM tbl WHERE ID IN (1,2,5);
+
+                listID = lsId.join(',');
+
+				window.location.href = "?m=typedog&a=delete&lsid="+listID;	
+			}
+		}
+	}
+    function onAdd(){
+		window.location.href="?m=typedog&a=add";
+	}
+    function onDelete(_id){
+        if(confirm("Do you want to delete this record?")){
+            window.location.href="?m=typedog&a=delete&id="+_id;
+        }
+    }
+    function onEdit(_id){
+        if(confirm("Do you want to edit this record?")){
+            window.location.href="?m=typedog&a=edit&id="+_id;
+        }
+    }
+    function setLimit(){
+        var s= document.getElementById('txtLimit').value;
+        window.location.href="?m=table&a=Typedog&limit="+s;
+       // alert(limit);
+       
+    }
+   
+
+    
+</script>
+<form method='POST' name='frmTable'>
+<div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+            <h4 class="page-title">Analytics</h4>
+        </div>
+    
+</div>
+<div class="row">
+    <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="white-box analytics-info">
+            <h3 class="box-title">Total Visit</h3>
+            <ul class="list-inline two-part">
+                <li>
+                    <div id="sparklinedash"></div>
+                </li>
+                
+                <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success">500</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="white-box analytics-info">
+            <h3 class="box-title">Total Page Views</h3>
+            <ul class="list-inline two-part">
+                <li>
+                    <div id="sparklinedash2"></div>
+                </li>
+                <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span class="counter text-purple">869</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="white-box analytics-info">
+            <h3 class="box-title">Unique Visitor</h3>
+            <ul class="list-inline two-part">
+                <li>
+                    <div id="sparklinedash3"></div>
+                </li>
+                <li class="text-right"><i class="ti-arrow-up text-info"></i> <span class="counter text-info">911</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="white-box analytics-info">
+            <h3 class="box-title">new request</h3>
+            <ul class="list-inline two-part">
+                <li>
+                    <div id="sparklinedash4"></div>
+                </li>
+                <li class="text-right"><i class="ti-arrow-up text-danger"></i> <span class="text-danger">{request}</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-12 ">
+        <div class="white-box">
+            <div class="chart-container" style="position: relative; height:400px; width:700px">
+                <canvas id="Chart" ></canvas>
+            </div>
+
+        </div>
+    </div>
+</div>
+<input type="hidden" id="dog" value="{dog}">
+<input type="hidden" id="country" value="{country}">
+<input type="hidden" id="food" value="{food}">
+<input type="hidden" id="news" value="{news}">
+<input type="hidden" id="gallery" value="{gallery}">
+<input type="hidden" id="faq" value="{faq}">
+<input type="hidden" id="contact" value="{contact}">
+
+
+</form>
+<script>
+    var a= document.getElementById('dog').value  ;
+    var b= document.getElementById('country').value  ;
+    var c= document.getElementById('food').value  ;
+    var d= document.getElementById('news').value  ;
+    var e= document.getElementById('gallery').value  ;
+    var f= document.getElementById('faq').value  ;
+    var g= document.getElementById('contact').value  ;
+
+
+    var ctx = document.getElementById('Chart').getContext('2d');
+    var myChart = new Chart(ctx,{
+        type: 'horizontalBar',
+        data: {
+            labels: ['Dogs', 'Country', 'Foods', 'News', 'Gallery', 'FAQ','Cus_Contact'],
+            datasets: [{
+               
+                label:"",
+                
+
+                data: [a, b, c, d, e, f, g],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.5)',
+                    'rgba(54, 162, 235, 0.5)',
+                    'rgba(255, 206, 86, 0.5)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(153, 102, 255, 0.5)',
+                    'rgba(255, 159, 64, 0.5)',
+                    'rgba(1, 1, 2, 0.3)'
+
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(1, 1, 2, 0.8)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            title: {
+            display: true,
+            text: 'Total Record in Tables',
+            fontSize:16,
+        },
+            scales: { 
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+                        
+                    }
+                }]
+            }
+        }
+    });
+    </script>
+<!-- END: TABLE -->
